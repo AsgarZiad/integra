@@ -26,7 +26,7 @@ def preprocess_expression(expr_str: str) -> str:
         # Convert \frac{A}{B} or \dfrac{A}{B} repeatedly for nested fractions
         while re.search(r'\\d?frac\{([^{}]+)\}\{([^{}]+)\}', expr):
             expr = re.sub(r'\\d?frac\{([^{}]+)\}\{([^{}]+)\}', r'((\1)/(\2))', expr)
-
+ 
         # Convert \sqrt{A} -> sqrt(A)
         expr = re.sub(r'\\sqrt\{([^{}]+)\}', r'sqrt(\1)', expr)
 
