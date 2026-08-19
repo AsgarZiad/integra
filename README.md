@@ -45,7 +45,7 @@ The five team profiles are in the section with `id="about"` inside `templates/in
 
 Requirements:
 
-- Python 3.10+
+- Python 3.14+
 - Flask
 
 Install and run:
